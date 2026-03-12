@@ -89,24 +89,12 @@ tasks:
   frontend:dev:
     desc: Run frontend dev server
     cmds:
-      - |
-        if [ -f .env ]; then
-          set -a
-          . ./.env
-          set +a
-        fi
-        cd frontend && npm run dev
+      - cd frontend && npm run dev
 
   frontend:build:
     desc: Build frontend for production
     cmds:
-      - |
-        if [ -f .env ]; then
-          set -a
-          . ./.env
-          set +a
-        fi
-        cd frontend && npm run build
+      - cd frontend && npm run build
 
   dev:
     desc: Run backend and frontend together (Ctrl+C to stop)
